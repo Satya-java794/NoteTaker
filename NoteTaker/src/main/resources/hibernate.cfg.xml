@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "file:/C:/Users/HP/Downloads/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    
+    <session-factory>
+    
+    <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="connection.url">jdbc:oracle:thin:@localhost:1521/XEPDB1</property>
+    <property name="connection.username">hibernate</property>
+    <property name="connection.password">tiger</property>
+    <!-- Hibernate dialect for Oracle 21c (same as Oracle 12c) -->
+    <property name="dialect">org.hibernate.dialect.Oracle12cDialect</property>
+    <!-- The hbm2ddl (Hibernate to DDL) tool is used by Hibernate to automatically generate database schema -->
+    <property name="hbm2ddl.auto">update</property>
+    <!-- To show generated SQL queries in the console -->
+    <property name="show_sql">true</property>
+    
+    <mapping class="com.entities.Note"/> 
+    
+    </session-factory>
+    
+</hibernate-configuration>
